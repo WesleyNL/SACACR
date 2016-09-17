@@ -1,2 +1,2 @@
-# Sistema-de-Capta-o-de-gua-da-Chuva
-Implementação de uma aplicação Android.
+# Sistema Automatizado de Captação de Água da Chuva para Reutilização
+
