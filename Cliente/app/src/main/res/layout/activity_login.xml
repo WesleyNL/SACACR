@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".login.LoginActivity"
+    android:background="#ffffff"
+    android:scrollIndicators="start|end">
+
+    <TextView
+        style="@style/AppTema.AppTextTitulo"
+        android:text="Login: "
+        android:id="@+id/lblLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="59dp"
+        android:layout_above="@+id/lblSenha"
+        android:layout_alignStart="@+id/btnEntrar"
+        android:layout_marginLeft="-0dp" />
+
+    <Button
+        style="@style/AppTema.AppBotao"
+        android:text="Entrar"
+        android:id="@+id/btnEntrar"
+        android:onClick="acessar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        style="@style/AppTema.AppTextTitulo"
+        android:text="Senha:"
+        android:id="@+id/lblSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="95dp"
+        android:layout_above="@+id/btnEntrar"
+        android:layout_alignStart="@+id/btnEntrar"
+        android:layout_marginLeft="-0dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLogin"
+        android:layout_alignTop="@+id/lblLogin"
+        android:layout_alignEnd="@+id/btnEntrar"
+        android:layout_toEndOf="@+id/lblLogin"
+        android:layout_marginTop="-14dp"
+        android:textColor="#FF373737"
+        android:scrollIndicators="start|end"
+        android:singleLine="true"
+        android:maxLength="20" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSenha"
+        android:layout_alignTop="@+id/lblSenha"
+        android:layout_alignEnd="@+id/btnEntrar"
+        android:layout_toEndOf="@+id/lblSenha"
+        android:layout_marginTop="-14dp"
+        android:password="true"
+        android:inputType="textPassword"
+        android:textColor="#FF373737"
+        android:scrollIndicators="start|end"
+        android:maxLength="20" />
+
+    <TextView
+        style="@style/AppTema.AppTextTitulo"
+        android:text="Acesso ao Sistema"
+        android:id="@+id/lblAcesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp" />
+
+    <ImageButton
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButton"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:background="#00ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="fechar"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lembrar meu login e senha"
+        android:id="@+id/chkLembrar"
+        android:layout_below="@+id/txtSenha"
+        android:layout_alignStart="@+id/lblSenha"
+        android:checked="false" />
+
+</RelativeLayout>

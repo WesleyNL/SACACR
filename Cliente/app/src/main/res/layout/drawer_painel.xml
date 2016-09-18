@@ -1,0 +1,13 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFEFE"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="0dp"
+    tools:context=".painel.NavigationDrawerFragment"
+    android:choiceMode="singleChoice"
+    android:headerDividersEnabled="false"
+    android:touchscreenBlocksFocus="false"
+    tools:listitem="@android:layout/simple_list_item_1"
+    android:textFilterEnabled="false" />
