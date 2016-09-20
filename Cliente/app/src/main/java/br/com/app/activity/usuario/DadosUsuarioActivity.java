@@ -14,6 +14,7 @@ import br.com.app.Sistema;
 import br.com.app.activity.R;
 import br.com.app.business.usuario.AcessoDAO;
 import br.com.app.utils.FuncoesData;
+import br.com.app.utils.Utils;
 
 public class DadosUsuarioActivity extends Activity {
 
@@ -107,12 +108,27 @@ public class DadosUsuarioActivity extends Activity {
     public void salvar(View view){
 
         EditText txtNome = (EditText) findViewById(R.id.txtDadosNome);
-        objAcessoDAO.setNome(txtNome.getText().toString().trim());
+        objAcessoDAO.setNome(Utils.removerAcento(txtNome.getText().toString()).trim());
 
         EditText txtSenha = (EditText) findViewById(R.id.txtDadosSenha);
         objAcessoDAO.setSenha(txtSenha.getText().toString().trim());
 
-        if(objAcessoDAO.getNome().isEmpty() || objAcessoDAO.getSenha().isEmpty()){
+        if(objAcessoDAO.getUsuario().contains(" ") || !Utils.soTexto(objAcessoDAO.getUsuario()) || Utils.temCaractereEspecial(objAcessoDAO.getUsuario())){
+            Toast.makeText(this, "Login inválido", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if(!Utils.soTexto(objAcessoDAO.getNome())){
+            Toast.makeText(this, "Nome inválido", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if(objAcessoDAO.getUsuario().equalsIgnoreCase(objAcessoDAO.getSenha())){
+            Toast.makeText(this, "Usuário e senha não podem ser iguais", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if(objAcessoDAO.getNome().isEmpty() || objAcessoDAO.getUsuario().isEmpty() || objAcessoDAO.getSenha().isEmpty()){
             Toast.makeText(this, "Dados inválidos", Toast.LENGTH_LONG).show();
             return;
         }
@@ -134,6 +150,7 @@ public class DadosUsuarioActivity extends Activity {
         objAcessoDAO.setEdicao(true);
         if(objAcessoDAO.salvar()){
             Toast.makeText(this, "Dados salvos com sucesso", Toast.LENGTH_LONG).show();
+            carregar(objAcessoDAO.getCodigo());
         }else{
             Toast.makeText(this, "Não foi possível salvar", Toast.LENGTH_LONG).show();
         }

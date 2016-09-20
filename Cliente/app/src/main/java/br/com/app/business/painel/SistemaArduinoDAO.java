@@ -20,18 +20,18 @@ public class SistemaArduinoDAO extends SistemaArduino{
     /** Cálculo com base na tabela da SABESP para contrato Residencial / Normal */
     private void calcularValor(){
         double base = 22.38;
-        double consumo = getConsumoConcessionaria() / 1000;
+        double consumo = getConsumoConcessionaria();
         double acrescimo = 0;
 
         if(consumo >= 11 && consumo <= 20){
-            acrescimo *= 3.50;
+            acrescimo = 3.50;
         } else if(consumo >= 21 && consumo <= 50){
-            acrescimo *= 8.75;
-        } else{
-            acrescimo *= 9.64;
+            acrescimo = 8.75;
+        } else if(consumo >= 51){
+            acrescimo = 9.64;
         }
 
-        setValor(base + acrescimo);
+        setValor(base + ((consumo - 10) * acrescimo));
     }
 
     public boolean alterarPreferencia(boolean utilizarReservatorioChuva){

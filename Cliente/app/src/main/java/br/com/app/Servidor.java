@@ -21,7 +21,7 @@ import br.com.app.utils.FuncoesData;
  */
 public class Servidor {
 
-    public static String SERVIDOR_URL_PADRAO = "http://192.168.25.10:1337/";
+    public static String SERVIDOR_URL_PADRAO = "http://localhost:1337/";
 
     public static String ACAO_ACESSO = "acesso";
     public static String ACAO_SISTEMA_ARDUINO = "sistemaarduino";

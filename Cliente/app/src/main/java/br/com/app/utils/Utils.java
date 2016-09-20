@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 
 import java.security.MessageDigest;
+import java.text.Normalizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import br.com.app.activity.login.LoginActivity;
 import br.com.app.activity.painel.PainelActivity;
@@ -82,5 +85,27 @@ public class Utils {
         }
 
         return true;
+    }
+
+    public static boolean soTexto(String texto){
+        for(char letra : texto.toCharArray()){
+            if(Character.isDigit(letra)){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean temCaractereEspecial(String texto) {
+        Pattern p = Pattern.compile("[^a-z0-9]", Pattern.CASE_INSENSITIVE);
+        Matcher m = p.matcher(texto);
+        return m.find();
+    }
+
+    public static String removerAcento(String texto){
+        String nfdNormalizedString = Normalizer.normalize(texto, Normalizer.Form.NFD);
+        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        return pattern.matcher(nfdNormalizedString).replaceAll("");
     }
 }

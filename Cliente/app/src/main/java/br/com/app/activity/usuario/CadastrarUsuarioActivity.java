@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import br.com.app.activity.R;
 import br.com.app.business.usuario.AcessoDAO;
+import br.com.app.utils.Utils;
 
 public class CadastrarUsuarioActivity extends Activity {
 
@@ -36,7 +37,7 @@ public class CadastrarUsuarioActivity extends Activity {
     public void salvar(View view){
 
         EditText txtNome = (EditText) findViewById(R.id.txtNomeCadUsuario);
-        objAcessoDAO.setNome(txtNome.getText().toString().trim());
+        objAcessoDAO.setNome(Utils.removerAcento(txtNome.getText().toString()).trim());
 
         EditText txtLogin = (EditText) findViewById(R.id.txtLoginCadUsuario);
         objAcessoDAO.setUsuario(txtLogin.getText().toString().trim());
@@ -44,8 +45,13 @@ public class CadastrarUsuarioActivity extends Activity {
         EditText txtSenha = (EditText) findViewById(R.id.txtSenhaCadUsuario);
         objAcessoDAO.setSenha(txtSenha.getText().toString().trim());
 
-        if(objAcessoDAO.getUsuario().contains(" ")){
+        if(objAcessoDAO.getUsuario().contains(" ") || !Utils.soTexto(objAcessoDAO.getUsuario()) || Utils.temCaractereEspecial(objAcessoDAO.getUsuario())){
             Toast.makeText(this, "Login inválido", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if(!Utils.soTexto(objAcessoDAO.getNome())){
+            Toast.makeText(this, "Nome inválido", Toast.LENGTH_LONG).show();
             return;
         }
 
