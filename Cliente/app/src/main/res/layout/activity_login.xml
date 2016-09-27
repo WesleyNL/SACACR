@@ -51,11 +51,12 @@
         android:layout_alignTop="@+id/lblLogin"
         android:layout_alignEnd="@+id/btnEntrar"
         android:layout_toEndOf="@+id/lblLogin"
-        android:layout_marginTop="-14dp"
+        android:layout_marginTop="-6dp"
         android:textColor="#FF373737"
         android:scrollIndicators="start|end"
         android:singleLine="true"
-        android:maxLength="20" />
+        android:maxLength="20"
+        android:padding="6dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -64,12 +65,14 @@
         android:layout_alignTop="@+id/lblSenha"
         android:layout_alignEnd="@+id/btnEntrar"
         android:layout_toEndOf="@+id/lblSenha"
-        android:layout_marginTop="-14dp"
+        android:layout_marginTop="-6dp"
         android:password="true"
         android:inputType="textPassword"
         android:textColor="#FF373737"
         android:scrollIndicators="start|end"
-        android:maxLength="20" />
+        android:maxLength="20"
+        android:text="iuoiuoiu"
+        android:padding="6dp" />
 
     <TextView
         style="@style/AppTema.AppTextTitulo"
@@ -79,7 +82,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="59dp" />
+        android:layout_marginTop="59dp"
+        android:textSize="19dp" />
 
     <ImageButton
         android:layout_width="55dp"
@@ -98,6 +102,7 @@
         android:id="@+id/chkLembrar"
         android:layout_below="@+id/txtSenha"
         android:layout_alignStart="@+id/lblSenha"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_marginLeft="-5dp" />
 
 </RelativeLayout>

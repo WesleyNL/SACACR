@@ -11,6 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@mipmap/ic_logotipo"
-        android:background="#c2e3e6" />
+        android:background="#009ACD" />
 
 </RelativeLayout>

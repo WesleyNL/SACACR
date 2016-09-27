@@ -48,23 +48,24 @@ module.exports.connections = {
   //   database: 'YOUR_MYSQL_DB' //optional
   // },
 
-  //someMysqlServer: {
-  //  adapter: 'sails-mysql',
-  //  host: 'LOCALHOST',
-  //  user: 'FATEC', //optional
-  //  password: '1234', //optional
-  //  database: 'TG', //optional
-  //  timezone: 'utc'
-  //},
-
   someMysqlServer: {
     adapter: 'sails-mysql',
-    host: process.env.OPENSHIFT_MYSQL_DB_HOST || '127.0.0.1',
-    user: process.env.OPENSHIFT_MYSQL_DB_USERNAME || 'root',
-    password: process.env.OPENSHIFT_MYSQL_DB_PASSWORD || 'root',
-    port: process.env.OPENSHIFT_MYSQL_DB_PORT || 3306,
+    host: 'LOCALHOST',
+    user: 'FATEC', //optional
+    password: '1234', //optional
+    database: 'TG', //optional
     timezone: 'utc'
   },
+
+  //someMysqlServer: {
+  //  adapter: 'sails-mysql',
+  //  host: process.env.OPENSHIFT_MYSQL_DB_HOST || '127.12.201.2',
+  //  user: process.env.OPENSHIFT_MYSQL_DB_USERNAME || 'adminyfM1D6r',
+  //  password: process.env.OPENSHIFT_MYSQL_DB_PASSWORD || 'PcyCSwvCAVLC',
+  //  port: process.env.OPENSHIFT_MYSQL_DB_PORT || 3306,
+  //  database: 'nodejs',
+  // timezone: 'utc'
+  //},
   
   /***************************************************************************
   *                                                                          *

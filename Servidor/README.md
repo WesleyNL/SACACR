@@ -1,3 +1,2 @@
-# Servidor
-
-a [Sails](http://sailsjs.org) application
+# SACACR-Servidor
+Servidor do projeto SACACR

@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="19dp" />
 
     <TextView
         style="@style/AppTema.AppTextTitulo"
@@ -39,12 +40,13 @@
         android:layout_alignTop="@+id/textView"
         android:layout_alignStart="@+id/lblDadosUsuario"
         android:width="220dp"
-        android:layout_marginTop="-12dp"
+        android:layout_marginTop="-4dp"
         android:textColor="#373737"
         android:layout_marginLeft="-17dp"
         android:scrollIndicators="start|end"
         android:maxLength="50"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:padding="6dp" />
 
     <TextView
         style="@style/AppTema.AppTextTitulo"
@@ -65,12 +67,13 @@
         android:width="220dp"
         android:layout_alignTop="@+id/lblLogin"
         android:layout_alignStart="@+id/txtDadosNome"
-        android:layout_marginTop="-12dp"
+        android:layout_marginTop="-4dp"
         android:enabled="false"
         android:textColor="#373737"
         android:layout_marginLeft="2dp"
         android:singleLine="true"
-        android:scrollIndicators="start|end" />
+        android:scrollIndicators="start|end"
+        android:padding="6dp" />
 
     <TextView
         style="@style/AppTema.AppTextTitulo"
@@ -92,12 +95,13 @@
         android:width="220dp"
         android:layout_alignTop="@+id/lblSenha"
         android:layout_alignStart="@+id/txtDadosLogin"
-        android:layout_marginTop="-12dp"
+        android:layout_marginTop="-4dp"
         android:inputType="numberPassword"
         android:textColor="#373737"
         android:scrollIndicators="start|end"
         android:maxLength="20"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:padding="6dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -110,7 +114,8 @@
         android:layout_below="@+id/txtDadosSenha"
         android:inputType="datetime"
         android:enabled="false"
-        android:textColor="#373737" />
+        android:textColor="#373737"
+        android:padding="6dp" />
 
     <TextView
         style="@style/AppTema.AppTextTitulo"
@@ -120,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtDadosInclusao"
         android:layout_marginTop="28dp"
-        android:layout_marginLeft="14dp" />
+        android:layout_marginLeft="10dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -130,10 +135,11 @@
         android:width="220dp"
         android:layout_alignTop="@+id/lblDataAcesso"
         android:layout_alignStart="@+id/txtDadosInclusao"
-        android:layout_marginTop="-12dp"
+        android:layout_marginTop="-4dp"
         android:inputType="datetime"
         android:enabled="false"
-        android:textColor="#373737" />
+        android:textColor="#373737"
+        android:padding="6dp" />
 
     <TextView
         style="@style/AppTema.AppTextTitulo"
@@ -153,11 +159,14 @@
         android:text="Salvar"
         android:id="@+id/btnSalvar"
         android:onClick="salvar"
-        android:textColor="@color/colorPrimaryInverseText"
+        android:textColor="@color/colorPrimaryText"
         android:background="@drawable/btncustomshape"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/lblLogin"
-        android:layout_marginBottom="26dp" />
+        android:layout_marginBottom="26dp"
+        android:textSize="16dp"
+        android:width="120dp"
+        android:layout_marginLeft="10dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -165,9 +174,12 @@
         android:text="Excluir"
         android:id="@+id/btnExcluir"
         android:onClick="excluir"
-        android:textColor="@color/colorPrimaryInverseText"
+        android:textColor="@color/colorPrimaryText"
         android:background="@drawable/btncustomshape"
         android:layout_alignTop="@+id/btnSalvar"
-        android:layout_alignEnd="@+id/txtDadosNome" />
+        android:layout_alignEnd="@+id/txtDadosNome"
+        android:textSize="16dp"
+        android:width="120dp"
+        android:layout_marginRight="-10dp" />
 
 </RelativeLayout>

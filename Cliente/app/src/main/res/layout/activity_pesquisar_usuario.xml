@@ -17,7 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="19dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -31,7 +32,8 @@
         android:layout_marginTop="18dp"
         android:layout_toStartOf="@+id/btnFiltrar"
         android:maxLength="50"
-        android:scrollIndicators="start|end" />
+        android:scrollIndicators="start|end"
+        android:padding="7dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -39,12 +41,13 @@
         android:text="Filtrar"
         android:id="@+id/btnFiltrar"
         android:onClick="filtrar"
-        android:textColor="@color/colorPrimaryInverseText"
+        android:textColor="@color/colorPrimaryText"
         android:background="@drawable/btncustomshape"
         android:layout_alignTop="@+id/txtPesquisarUsuario"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-5dp"
-        android:layout_marginBottom="5dp" />
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="16dp" />
 
     <TextView
         android:layout_width="wrap_content"

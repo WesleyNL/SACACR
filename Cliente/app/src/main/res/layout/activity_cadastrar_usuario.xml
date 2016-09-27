@@ -16,7 +16,7 @@
         android:onClick="salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="30dp"
         android:text="Salvar"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -30,7 +30,7 @@
         android:layout_marginBottom="150dp"
         android:layout_above="@+id/btnSalvar"
         android:layout_toStartOf="@+id/txtLoginCadUsuario"
-        android:layout_marginRight="6dp" />
+        android:layout_marginRight="2dp" />
 
     <TextView
         style="@style/AppTema.AppTextTitulo"
@@ -52,11 +52,12 @@
         android:layout_alignBottom="@+id/lblNome"
         android:layout_alignEnd="@+id/txtLoginCadUsuario"
         android:layout_alignStart="@+id/txtLoginCadUsuario"
-        android:layout_marginBottom="-12dp"
+        android:layout_marginBottom="-8dp"
         android:textColor="#FF373737"
         android:scrollIndicators="start|end"
         android:singleLine="true"
-        android:maxLength="50" />
+        android:maxLength="50"
+        android:padding="7dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -65,12 +66,13 @@
         android:layout_alignTop="@+id/lblLogin"
         android:layout_alignEnd="@+id/btnSalvar"
         android:layout_toEndOf="@+id/lblSenha"
-        android:layout_marginTop="-12dp"
+        android:layout_marginTop="-6dp"
         android:textColor="#FF373737"
         android:layout_alignStart="@+id/lblCadastrarUsuario"
         android:singleLine="true"
         android:scrollIndicators="start|end"
-        android:maxLength="20" />
+        android:maxLength="20"
+        android:padding="6dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -79,14 +81,15 @@
         android:password="true"
         android:layout_alignBottom="@+id/lblSenha"
         android:layout_alignEnd="@+id/txtLoginCadUsuario"
-        android:layout_marginBottom="-12dp"
+        android:layout_marginBottom="-8dp"
         android:textColor="#FF373737"
         android:layout_toEndOf="@+id/lblSenha"
         android:layout_alignStart="@+id/lblCadastrarUsuario"
         android:singleLine="true"
         android:scrollIndicators="start|end"
         android:maxLength="20"
-        android:inputType="numberPassword" />
+        android:inputType="numberPassword"
+        android:padding="6dp" />
 
     <TextView
         style="@style/AppTema.AppTextTitulo"
@@ -107,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="19dp" />
 
 </RelativeLayout>

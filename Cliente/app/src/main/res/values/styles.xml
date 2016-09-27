@@ -98,9 +98,9 @@
         <item name="android:layout_marginLeft">15dp</item>
         <item name="android:layout_marginRight">15dp</item>
         <item name="android:background">@drawable/btndefaultshape</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/colorPrimaryInverseText</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
         <item name="android:textAllCaps">true</item>
     </style>
 

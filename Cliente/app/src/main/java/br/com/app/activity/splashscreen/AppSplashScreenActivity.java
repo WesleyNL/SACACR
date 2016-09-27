@@ -30,8 +30,6 @@ public class AppSplashScreenActivity extends Activity {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-
-        getWindow().setStatusBarColor(getResources().getColor(R.color.colorStatusBar_logotipo));
     }
 
     @Override
